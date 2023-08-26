@@ -8,6 +8,7 @@
     app:cardCornerRadius="0dp"
     app:cardUseCompatPadding="true">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -28,8 +29,7 @@
 
             android:layout_height="30dp"
             android:text="@string/default_price"
-            android:textAlignment="center"
-            android:textColor="@color/special_offers"
+            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/iv_item_image">
 
@@ -37,8 +37,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 </androidx.cardview.widget.CardView>

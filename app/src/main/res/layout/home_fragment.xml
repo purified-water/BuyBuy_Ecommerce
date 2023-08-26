@@ -14,32 +14,72 @@
         <LinearLayout
             android:id="@+id/ll_hori_app_bar"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_small"
+            android:layout_marginEnd="@dimen/padding_small"
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginBottom="@dimen/padding_x_small"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_app_name"
-                android:layout_width="182dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/padding_small"
-                android:text="@string/app_name_short"
-                android:textSize="40sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/search_bar_background">
 
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_x_small"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Search anything"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="30dp"
+
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/padding_medium"
+                    android:src="@drawable/search_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.91"
+                    app:layout_constraintStart_toEndOf="@+id/tv_search"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                </ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent">
+
+            </View>
             <ImageView
                 android:id="@+id/iv_shopping_cart"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:src="@drawable/shopping_cart" />
+                android:layout_weight="0.25"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/shopping_cart"
+                android:background="@color/search_bar_background">
+
+            </ImageView>
+
+
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" >
 
-        </Space>
 
         <HorizontalScrollView
             android:id="@+id/sv_hori_categories"

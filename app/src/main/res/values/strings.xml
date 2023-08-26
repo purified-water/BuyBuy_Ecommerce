@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BuyBuy Ecommerce</string>
     <string name="app_name_short">BuyBuy</string>
+    <string name="default_price">₫ 700.000</string>
 </resources>
